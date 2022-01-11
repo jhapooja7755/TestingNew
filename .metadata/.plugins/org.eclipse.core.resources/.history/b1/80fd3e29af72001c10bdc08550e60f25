@@ -1,0 +1,24 @@
+package com.pooja;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//System.out.println("hi");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Desktop\\Modulr_scenario\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://secure-sandbox.modulrfinance.com/");
+		driver.findElement(By.id("username-inp")).sendKeys("pooja.jha91");
+		driver.findElement(By.id("password-inp")).sendKeys("Vinita6@654321");
+		driver.findElement(By.xpath("//*[contains(text(),'Sign in ')]")).click();
+		
+		
+
+	}
+
+}
